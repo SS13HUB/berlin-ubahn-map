@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"problemMatcher": [],
+			"label": "npm: install",
+			"detail": "install dependencies from package"
+		},
+		{
+			"label": "Update submodules",
+			"type": "shell",
+			"command": "cd \"${workspaceFolder}\\submodules\\ss13-projects-data\" && git submodule init && git submodule update && git status",
+			"problemMatcher": []
+		},
+		{
+			"label": "Start http-server",
+			"type": "shell",
+			"command": "node .\\node_modules\\http-server\\bin\\http-server",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]}
+
